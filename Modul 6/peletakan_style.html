@@ -1,0 +1,124 @@
+<!--Peletakan Style pada tag-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 13px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%;">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <th>Rusi</th>
+            <th>Anandi</th>
+            <th>17</th>
+        </tr>
+    </table>
+    </body>
+</html>
+
+<!--Pentabelan menggunakan css id-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 5px;
+                text-align: left;
+            }
+            table#01{
+                width: 100%;
+                background-color: #f1f1c1;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%;">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <th>Rusi</th>
+                <th>Anandi</th>
+                <th>17</th>
+            </tr>
+        </table>
+        <br>
+
+        <table id="t01">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <th>Novya</th>
+                <th>Selena</th>
+                <th>18</th>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--Style tabel menggunakan class-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            table.name{
+                width: 100%;
+                background-color: #f1f1c1;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%;">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <th>Novya</th>
+                <th>Selena</th>
+                <th>18</th>
+            </tr>
+        </table>
+        
+        <br>
+
+        <table class="names">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <th>Novya</th>
+                <th>Selena</th>
+                <th>18</th>
+            </tr>
+        </table>
+    </body>
+</html>
