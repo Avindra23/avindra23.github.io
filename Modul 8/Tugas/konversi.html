@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Konversi Nilai Angka ke Nilai Huruf</h2>
+  
+    <label for="nilai">Masukkan nilai angka:</label>
+    <input type="number" id="nilai" placeholder="0-100" min="0" max="100">
+    <button onclick="konversiNilai()">Konversi</button>
+  
+    <p id="hasil"></p>
+
+    <script>
+        function konversiNilai() {
+            // Mendapatkan nilai dari input
+            var nilaiAngka = parseInt(document.getElementById('nilai').value);
+
+            // Melakukan konversi menggunakan switch
+            var nilaiHuruf;
+                switch (true) {
+                    case nilaiAngka >= 0 && nilaiAngka <= 40:
+                        nilaiHuruf = 'E';
+                        break;
+                    case nilaiAngka <= 55:
+                        nilaiHuruf = 'D';
+                        break;
+                    case nilaiAngka <= 60:
+                        nilaiHuruf = 'C';
+                        break;
+                    case nilaiAngka <= 65:
+                        nilaiHuruf = 'BC';
+                        break;
+                    case nilaiAngka <= 70:
+                        nilaiHuruf = 'B';
+                        break;
+                    case nilaiAngka <= 80:
+                        nilaiHuruf = 'AB';
+                        break;
+                    case nilaiAngka <= 100:
+                        nilaiHuruf = 'A';
+                        break;
+                    default:
+                    nilaiHuruf = 'Nilai tidak valid';
+                }
+
+            // Menampilkan hasil konversi
+            document.getElementById('hasil').innerHTML = 'Nilai huruf: ' + nilaiHuruf;
+        }
+    </script>
+</body>
+</html>

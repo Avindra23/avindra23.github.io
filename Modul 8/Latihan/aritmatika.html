@@ -1,0 +1,42 @@
+<!--Operasi Dasar Aritmatika-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contoh Program JavaScript</title>
+        <script>
+            function pesan(){
+                alert ("memanggil javascript lewat body onload");
+            }
+        </script>
+    </head>
+    <body onload="pesan()">
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contoh Program JavaScript</title>
+        <script>
+            function test (val1, val2) {
+                document.write("<br>"+"Perkalian : val1 * val2 "+"<br>");
+                document.write(val1 * val2);
+                document.write("<br>"+"Pembagian : val1 / val2 "+"<br>");
+                document.write(val1 / val2);
+                document.write("<br>"+"Penjumlahan : val1 + val2 "+"<br>");
+                document.write(val1 + val2);
+                document.write("<br>"+"Pengurangan : val1 - val2 "+"<br>");
+                document.write(val1 - val2);
+                document.write("<br>"+"Modulus : val1 % val2 "+"<br>");
+                document.write(val1 % val2);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="button1" value="arithmetic" onclick="test(9, 4)">
+    </body>
+</html>

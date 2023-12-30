@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kalkulator Sederhana</h2>
+  
+  <label for="bil1">Bilangan 1:</label>
+  <input type="text" id="bil1" placeholder="Masukkan bilangan 1">
+
+  <label for="bil2">Bilangan 2:</label>
+  <input type="text" id="bil2" placeholder="Masukkan bilangan 2">
+
+  <button onclick="hitung('+')">+</button>
+  <button onclick="hitung('-')">-</button>
+  <button onclick="hitung('*')">*</button>
+  <button onclick="hitung('/')">/</button>
+
+  <label for="hasil">Hasil:</label>
+  <input type="text" id="hasil" readonly>
+
+  <script>
+    function hitung(operator) {
+      var bil1 = parseFloat(document.getElementById('bil1').value);
+      var bil2 = parseFloat(document.getElementById('bil2').value);
+
+      if (isNaN(bil1) || isNaN(bil2)) {
+        document.getElementById('hasil').value = 'Masukkan bilangan yang valid.';
+        return;
+      }
+
+      var hasil;
+      switch (operator) {
+        case '+':
+          hasil = bil1 + bil2;
+          break;
+        case '-':
+          hasil = bil1 - bil2;
+          break;
+        case '*':
+          hasil = bil1 * bil2;
+          break;
+        case '/':
+          hasil = bil1 / bil2;
+          break;
+        default:
+          hasil = 'Operasi tidak valid.';
+      }
+
+      document.getElementById('hasil').value = hasil;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--Form input-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contoh Program JavaScript</title>
+    </head>
+    <body>
+        <script>
+            function test () {
+                var val1=document.kirim.T1.value
+                if (val1%2==0)
+                document.kirim.T2.value = "bilangan genap"
+                else
+                document.kirim.T2.value = "bilangan ganjil"
+            }
+        </script>
+    </body>
+    <form method="post" name="kirim">
+        <p>BIL <input type="text" name="T1" size="20">Merupakan Bil <input type="text" name="T2" size="20"></p>
+        <p><input type="button" value="TEBAK" name="B1" onclick="test()"></p>
+    </form>
+</html>
+
+<br>
+
+<!--Form button-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contoh Program JavaScript</title>
+    </head>
+    <body>
+        <script>
+            function ubahWarnaLB(warna) {
+                document.body.style.backgroundColor = warna;
+            }
+            function ubahWarnaLD(warna) {
+                document.body.style.color = warna;
+            }
+        </script>
+        <h1>TES</h1>
+        <form>
+            <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('green')">
+            <input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('white')">
+            <input type="button" value="Text Kuning" onclick="ubahWarnaLD('yellow')">
+            <input type="button" value="Text Biru" onclick="ubahWarnaLD('blue')">
+        </form>
+    </body>
+</html>
